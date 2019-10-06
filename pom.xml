@@ -6,8 +6,9 @@
         <groupId>com.kr</groupId>
         <artifactId>YKR-dependencies</artifactId>
         <version>1.0.0-SNAPAHOT</version>
-     <!--   <relativePath>../YKR-dependencies/pom.xml</relativePath>-->
-        <relativePath>../YKR-dependencies</relativePath>
+        <relativePath>../YKR-dependencies/pom.xml</relativePath>
+      <!--  <relativePath>../YKR-dependencies</relativePath>-->
+  <!--      <relativePath>../../pom.xml</relativePath>-->
     </parent>
     <artifactId>YKR-config</artifactId>
     <packaging>jar</packaging>
@@ -89,9 +90,9 @@
                 <updatePolicy>always</updatePolicy>
             </releases>
         </repository>
+    </repositories>
 
-
-        <repository>
+   <!--     <repository>
             <id>aliyun-repos</id>
             <name>Aliyum Repository</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
@@ -101,8 +102,5 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </repository>
-    </repositories>
-
-
+        </repository>-->
 </project>
