@@ -81,14 +81,13 @@
             <url>http://192.168.154.129:8081/repository/maven-public/</url>
             <snapshots><!--快照-->
                 <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
             </snapshots>
             <releases>
                 <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
             </releases>
         </repository>
-
-
-
 
 
         <repository>
