@@ -7,7 +7,7 @@
         <artifactId>YKR-dependencies</artifactId>
         <version>1.0.0-SNAPAHOT</version>
      <!--   <relativePath>../YKR-dependencies/pom.xml</relativePath>-->
-        <relativePath></relativePath>
+        <relativePath>../YKR-dependencies</relativePath>
     </parent>
     <artifactId>YKR-config</artifactId>
     <packaging>jar</packaging>
