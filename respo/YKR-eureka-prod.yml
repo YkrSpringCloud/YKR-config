@@ -68,5 +68,5 @@ eureka:
     fetch-registry: true
     serviceUrl:
     #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-    defaultZone: http://ip:8761/eureka/,http://ip:8861/eureka,http://ip:8961/eureka/
+    defaultZone: http://localhost:8761/eureka/,http://localhost:8861/eureka,http://localhost:8961/eureka/
     #eureka的集群就是多个eureka之间互相注册，一个eureka注册一个eureka而来
