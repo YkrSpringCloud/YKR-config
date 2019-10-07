@@ -1,6 +1,38 @@
+#spring:
+#  application:
+#    name: YKR-eureka
+#  zipkin:
+#    base-url: http://localhost:9411
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8084
+#
+#
+#server:
+#  port: 8761
+#
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoints:
+#    web:
+#      exposure:
+#      #include: ["health","info"]  #信息监控和健康检查.如果此处是用的*则表示所有的服务都需要健康检查
+#      include: health,info
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    register-with-eureka: false  #当为单个eureka时候此处为false
+#    fetch-registry: false         #当为单个eureka时候此处为false
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 spring:
   application:
-    name: YKR-eureka
+    name: hello-spring-cloud-eureka
   zipkin:
     base-url: http://localhost:9411
   boot:
@@ -12,21 +44,13 @@ spring:
 server:
   port: 8761
 
-management:
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-      #include: ["health","info"]  #信息监控和健康检查.如果此处是用的*则表示所有的服务都需要健康检查
-      include: health,info
 
 eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false  #当为单个eureka时候此处为false
-    fetch-registry: false         #当为单个eureka时候此处为false
+    register-with-eureka: false
+    fetch-registry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    defaultZone: http://localhost:8761/eureka/

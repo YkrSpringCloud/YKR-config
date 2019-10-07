@@ -2,14 +2,14 @@ spring:
   application:
     name: YKR-config
   cloud:                   #注意，如果使用gitlab作为仓库的话，git.url需要在结尾加上.git,github则不用
-      config:
-        label: master   #配置仓库的分支
-        server:
-          git:
-            uri: https://github.com/YkrSpringCloud/YKR-config.git #配置git仓库地址（GitHub、GitLab）
-            search-paths: respo #配置仓库路径(存放配置文件的目录)
-            username: 1245053895@qq.com            #访问git仓库的账号
-            password: ykr15685314316            #访问git仓库的密码
+    config:
+      label: master   #配置仓库的分支
+      server:
+        git:
+          uri: https://github.com/YkrSpringCloud/YKR-config.git #配置git仓库地址（GitHub、GitLab）
+          search-paths: respo #配置仓库路径(存放配置文件的目录)
+          username: 1245053895@qq.com            #访问git仓库的账号
+          password: ykr15685314316            #访问git仓库的密码
 
 
   boot:
