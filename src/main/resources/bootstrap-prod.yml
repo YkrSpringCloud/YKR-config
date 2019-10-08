@@ -15,12 +15,12 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:8084
+        url: http://192.168.154.128:8084
        # url: http://192.168.154.128:8084   #增加springcloud服务监控
 
   zipkin:
     #base-url: http://192.168.154.128:9411
-   base-url: http://localhost:9411
+   base-url: http://192.168.154.128:9411
 
 
 
@@ -30,6 +30,6 @@ server:
 eureka:   #注册到eureka
   client:
     service-url:
-      defaultZone: http://localhost/eureka/
+      defaultZone: http://192.168.154.128/eureka/
       #defaultZone: http://192.168.154.128:8761/eureka/
 
