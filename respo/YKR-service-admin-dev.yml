@@ -77,7 +77,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 
-#management:
+#management:  #加入该项就无法成功通过http://localhost:8888/YKR-service-admin/dev/master访问到
 #  endpoint:
 #    health:
 #      show-details: always
