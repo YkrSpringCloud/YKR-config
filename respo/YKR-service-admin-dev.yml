@@ -62,14 +62,14 @@ spring:
 #      max-active: 20
 #      test-on-borrow: true
 #      driver-class-name: com.mysql.jdbc.Driver
-    datasource:
-      url: jdbc:mysql://localhost:3306/kr?serverTimezone=UTC
-      username: root
-      password: 123456
-      driver-class-name: com.mysql.jdbc.Driver
-
-      jpa:
-        show-sql: true
+#    datasource:
+#      url: jdbc:mysql://localhost:3306/kr?serverTimezone=UTC
+#      username: root
+#      password: 123456
+#      driver-class-name: com.mysql.jdbc.Driver
+#
+#      jpa:
+#        show-sql: true
 
 
 server:
