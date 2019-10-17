@@ -1,0 +1,95 @@
+#spring:
+##  application:
+##    name: YKR-service-admin
+##  zipkin:
+##    base-url: http://localhost:9411
+##  boot:
+##    admin:
+##      client:
+##        url: http://localhost:8084
+##
+##   datasource:
+##     druid:
+##       url: jdbc:mysql://localhost:3306/kr?useUnicode=true&characterEncoding=utf-8&useSSL=false
+##       username: root
+##       password: 123456
+##       initial-size: 1
+##       min-idle: 1
+##       max-active: 20
+##       test-on-borrow: true
+##       driver-class-name: com.mysql.jdbc.Driver
+##
+##
+##server:
+##  port: 8501
+##
+##mybatis:
+##  type-aliases-package: com.YKR.service.admin.domain
+##  mapper-location: classpath:mapper/*.xml
+##
+##eureka:
+##  client:
+##    serviceUrl:
+##      defaultZone: http://localhost:8761/eureka/
+##
+##
+##management:
+##  endpoint:
+##    health:
+##      show-details: always
+##  endpoints:
+##    web:
+##      exposure:
+##      #include: ["health","info"]  #信息监控和健康检查.如果此处是用的*则表示所有的服务都需要健康检查
+##      include: health,info
+spring:
+  application:
+    name: YKR-service-admin
+  zipkin:
+    base-url: http://localhost:9411
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+
+#  datasource:
+#    druid:
+#      url: jdbc:mysql://localhost:3306/kr?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#      username: root
+#      password: 123456
+#      initial-size: 1
+#      min-idle: 1
+#      max-active: 20
+#      test-on-borrow: true
+#      driver-class-name: com.mysql.jdbc.Driver
+    datasource:
+      url: jdbc:mysql://localhost:3306/kr?serverTimezone=UTC
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+
+      jpa:
+        show-sql: true
+
+
+server:
+  port: 8501
+
+mybatis:
+  type-aliases-package: com.YKR.service.admin.domain
+  mapper-locations: classpath*:com.YKR.service.admin.mapper/*.xml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+#management:  #加入该项就无法成功通过http://localhost:8888/YKR-service-admin/dev/master访问到
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info

@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: YKR-service-admin
+  zipkin:
+    base-url: http://192.168.154.128:9411
+  boot:
+    admin:
+      client:
+        url: http://192.168.154.128:8084
+
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/kr?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.jdbc.Driver
+
+
+server:
+  port: 8501
+
+mybatis:
+  type-aliases-package: com.YKR.service.admin.domain
+  mapper-location: classpath:mapper/*.xml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.154.128:8761/eureka/,http://192.168.154.128:8861/eureka,http://192.168.154.128:8961/eureka/
+
+
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info
