@@ -52,16 +52,24 @@ spring:
       client:
         url: http://localhost:8084
 
-  datasource:
-    druid:
-      url: jdbc:mysql://localhost:3306/kr?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#  datasource:
+#    druid:
+#      url: jdbc:mysql://localhost:3306/kr?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#      username: root
+#      password: 123456
+#      initial-size: 1
+#      min-idle: 1
+#      max-active: 20
+#      test-on-borrow: true
+#      driver-class-name: com.mysql.jdbc.Driver
+    datasource:
+      url: jdbc:mysql://localhost:3306/kr?serverTimezone=UTC
       username: root
       password: 123456
-      initial-size: 1
-      min-idle: 1
-      max-active: 20
-      test-on-borrow: true
       driver-class-name: com.mysql.jdbc.Driver
+
+      jpa:
+        show-sql: true
 
 
 server:
@@ -69,7 +77,7 @@ server:
 
 mybatis:
   type-aliases-package: com.YKR.service.admin.domain
-  mapper-location: classpath:mapper/*.xml
+  mapper-locations: classpath*:com.YKR.service.admin.mapper/*.xml
 
 eureka:
   client:
