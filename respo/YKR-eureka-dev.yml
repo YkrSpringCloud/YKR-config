@@ -54,7 +54,7 @@ server:
 #      exposure:
 #      #include: ["health","info"]  #信息监控和健康检查.如果此处是用的*则表示所有的服务都需要健康检查
 #      include: 'health','info'
-
+#加入上述的健康检查配置后，eureka的启动端口就会从8761改成8080.改为下面方法的配置即可
 management:
   endpoints:
     web:
