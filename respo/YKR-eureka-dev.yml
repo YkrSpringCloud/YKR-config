@@ -12,15 +12,15 @@
 #server:
 #  port: 8761
 #
-#management:
-#  endpoint:
-#    health:
-#      show-details: always
-#  endpoints:
-#    web:
-#      exposure:
-#      #include: ["health","info"]  #信息监控和健康检查.如果此处是用的*则表示所有的服务都需要健康检查
-#      include: health,info
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+      #include: ["health","info"]  #信息监控和健康检查.如果此处是用的*则表示所有的服务都需要健康检查
+      include: health,info
 #
 #eureka:
 #  instance:
