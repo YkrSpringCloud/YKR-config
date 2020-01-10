@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: YKR-service-redis
+  zipkin:
+    base-url: http://192.168.154.128:9411
+  redis:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    sentinel:
+      master: mymaster
+      modes: 192.168.154.131:26379, 192.168.154.131:26380, 192.168.154.131:26381
+  boot:
+    admin:
+      client:
+        url: http://192.168.154.128:8084
+
+server:
+  port: 8502
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.154.128:8761/eureka/,http://192.168.154.128:8861/eureka,http://192.168.154.128:8961/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
