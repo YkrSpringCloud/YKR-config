@@ -24,7 +24,7 @@ server:
   port: 8501
 
 mybatis:
-  type-aliases-package: com.YKR.service.admin.domain
+  type-aliases-package: com.YKR.common.domain
   mapper-location: classpath:mapper/*.xml
 
 eureka:

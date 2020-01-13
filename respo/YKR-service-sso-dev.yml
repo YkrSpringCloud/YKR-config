@@ -1,13 +1,12 @@
 spring:
   application:
-    name: YKR-service-admin
+    name: YKR-service-sso
   zipkin:
     base-url: http://localhost:9411
   boot:
     admin:
       client:
         url: http://localhost:8084
-
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     #数据库url
@@ -21,19 +20,19 @@ spring:
       initial-size: 5                               # 初始化提供的连接数
       max-total: 5                                # 最大的连接数
       max-wait-millis: 60000 				# 等待连接获取的最大超时时间
-
 server:
-  port: 8501
-
+  port: 8503
+# 开启Feign的熔断功能
+feign:
+  hystrix:
+    enabled: true
 mybatis:
   type-aliases-package: com.YKR.common.domain
-  mapper-locations: classpath*:com.YKR.service.admin.mapper/*.xml
-
+  mapper-locations: classpath*:com.YKR.service.sso.mapper/*.xml
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-
 management:
   endpoints:
     web:
