@@ -20,6 +20,13 @@ spring:
       initial-size: 5                               # 初始化提供的连接数
       max-total: 5                                # 最大的连接数
       max-wait-millis: 60000 				# 等待连接获取的最大超时时间
+
+  thymeleaf:                   #thymeleaf的配置
+    cache: false               #开发时关闭缓存，不然没发看到实时页面
+    mode: LEGACYHTML5          #用非严格的HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
 server:
   port: 8503
 # 开启Feign的熔断功能
