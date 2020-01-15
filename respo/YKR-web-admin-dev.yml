@@ -1,34 +1,5 @@
 spring:
   application:
     name: YKR-web-admin
-  zipkin:
-    base-url: http://localhost:9411
-  boot:
-    admin:
-      client:
-        url: http://localhost:8084
-
-  thymeleaf:                   #thymeleaf的配置
-    cache: false               #开发时关闭缓存，不然没发看到实时页面
-    mode: LEGACYHTML5          #用非严格的HTML
-    encoding: UTF-8
-    servlet:
-      content-type: text/html
-
 server:
   port: 8601  #85开头服务提供者，86开头服务消费者
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-# 开启Feign的熔断功能
-feign:
-  hystrix:
-    enabled: true
