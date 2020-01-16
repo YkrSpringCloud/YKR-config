@@ -7,6 +7,8 @@ spring:
         url: http://localhost:8084
 
 mybatis:
+  configuration:
+    cache-enabled: true
   type-aliases-package: com.YKR.common.domain
   mapper-locations: classpath:mapper/*.xml
 
