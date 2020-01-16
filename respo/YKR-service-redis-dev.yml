@@ -1,8 +1,8 @@
 spring:
   application:
     name: YKR-service-redis
-  zipkin:
-    base-url: http://localhost:9411
+#  zipkin:
+#    base-url: http://localhost:9411
   redis:
     lettuce:
       pool:
@@ -13,22 +13,21 @@ spring:
     sentinel:
       master: mymaster
       nodes: 192.168.154.131:26379,192.168.154.131:26380,192.168.154.131:26381
-  boot:
-    admin:
-      client:
-        url: http://localhost:8084
-
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8084
 server:
   port: 8502
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
 
